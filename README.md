@@ -20,17 +20,17 @@ The datasets used in our experiment can be downloaded from the *[dataset](https:
 
 An example where LightSANs is the base model and Amazon_Beauty is the dataset:
 
-* Step 1: pre-train for detecting unpredictable items
+* Step 1: pre-train for detecting unpredictable items.
 ``` bash
 nohup python run_pred_training.py --model=LightSANs --dataset=Amazon_Beauty --gpu_id='0' --seed=202301 --config_files=config_maxlen50_LightSANs.yaml --K=5 --B=5 &
 ```
 
-* Step 2: detecting unpredictable items and get a dataset with rankings, which is stored in `./dataset_with_rank`
+* Step 2: detecting unpredictable items and get a dataset with rankings, which is stored in `./dataset_with_rank`.
 ``` bash
 nohup python get_ranked_dataset_new.py --model=LightSANs --dataset=Amazon_Beauty --K=5 --B=5 --gpu_id=0 &
 ```
 
-* Step 3: Train the model with predictability score
+* Step 3: Train the model with predictability score.
 ``` bash
 nohup python run_training_with_score.py --model=LightSANs --dataset=Amazon_Beauty --gpu_id=0 --seed=202301 --config_files=config_maxlen50_LightSANs.yaml --save_dataset=False --save_dataloaders=False --K=5 --B=5 --P=0.3 --T=0.4 &
 ```
