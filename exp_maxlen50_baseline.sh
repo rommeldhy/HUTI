@@ -8,5 +8,5 @@ i_list=(1 2 3 4)
 for i in ${i_list[@]}
 do        
     echo "i: ${i} LightSANs"
-    python run_training_with_score.py --model=LightSANs --dataset=${dataset} --gpu_id=${gpu_id} --seed=$((seed+1)) --config_files=config_maxlen50_LightSANs.yaml --save_dataset=False --save_dataloaders=False
+    python run_training_with_score.py --model=LightSANs --dataset=${dataset} --gpu_id=${gpu_id} --seed=$((seed+i)) --config_files=config_maxlen50_LightSANs.yaml --save_dataset=False --save_dataloaders=False
 done
