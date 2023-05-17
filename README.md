@@ -35,7 +35,7 @@ nohup python get_ranked_dataset_new.py --model=LightSANs --dataset=Amazon_Beauty
 nohup python run_training_with_score.py --model=LightSANs --dataset=Amazon_Beauty --gpu_id=0 --seed=202301 --config_files=config_maxlen50_LightSANs.yaml --save_dataset=False --save_dataloaders=False --K=5 --B=5 --P=0.3 --T=0.4 &
 ```
 
-To reproduce the results in table 2, you can firstly run the Step 1 and Step 2, and then run the following script.
+To reproduce the results in table 2, you can firstly run the Step 1 and Step 2, and then run the following script. For Beauty dataset, we have released the dataset with rankings, you can skip Step 1 and Step 2.
 ``` bash
 nohup bash exp_maxlen50_with_score.sh &
 ```
