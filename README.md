@@ -39,6 +39,10 @@ To reproduce the results in table 2, you can firstly run the Step 1 and Step 2, 
 ``` bash
 nohup bash exp_maxlen50_with_score.sh &
 ```
+For ml-1m dataset, after running Step 1 and Step 2, you can run the following script:
+``` bash
+nohup bash exp_ml1m_lightsans_with_score.sh &
+```
 
 To reproduce the results of baselines, you can run the following script.
 ``` bash
